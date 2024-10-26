@@ -26,7 +26,6 @@ We use two architectures in this project: **simple EncDec** and **UNet**, the ma
 <!-- ![Our U-Net](./doc/image/UNet.png) -->
 <img src="./doc/image/UNet.png" alt="Our U-Net" width="500"/>
 
----
 
 ## 3. Performance Metric
 
@@ -35,9 +34,7 @@ In image segmentation, various metrics are used to evaluate model performance. H
 #### (1) Dice Coefficient
 - **Purpose**: The Dice coefficient (also known as the F1 score in binary classification) measures the similarity between the predicted segmentation mask and the ground truth. It is widely used in image segmentation tasks.
 - **Formula**: 
-$$
-\text{Dice} = \frac{2 \times |A \cap B|}{|A| + |B|}
-$$
+$$\text{Dice} = \frac{2 \times |A \cap B|}{|A| + |B|}$$
 
 - **Advantages**:
   - **Sensitivity to Class Overlap**: Dice is particularly useful for measuring overlap and is effective in situations with imbalanced data, where one class (e.g., foreground) is much smaller than the other.
@@ -46,9 +43,9 @@ $$
 #### (2) Intersection over Union (IoU)
 - **Purpose**: IoU, also known as the Jaccard Index, is another overlap-based metric commonly used in segmentation tasks. It calculates the ratio between the intersection and the union of the predicted and actual target areas.
 - **Formula**: 
-$$
-\text{IoU} = \frac{|A \cap B|}{|A \cup B|}
-$$
+
+$$\text{IoU} = \frac{|A \cap B|}{|A \cup B|}$$
+
 - **Advantages**:
   - **Handles Overlapping Areas Well**: IoU provides a straightforward way to assess the degree of overlap between the predicted and true regions.
   - **Robust for Evaluation**: It is robust against small errors in prediction and is often used as a benchmark in segmentation tasks.
@@ -56,9 +53,9 @@ $$
 #### (3) Accuracy
 - **Purpose**: Accuracy measures the overall correctness of the prediction by calculating the ratio of correctly classified pixels to the total number of pixels.
 - **Formula**: 
-$$
-\text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{Total Number of Pixels}}
-$$
+
+$$\text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{Total Number of Pixels}}$$
+
 - **Advantages**:
   - **Easy Interpretation**: Accuracy is easy to interpret as a percentage of correctly classified pixels.
   - **Useful for Balanced Datasets**: When the dataset is balanced, accuracy provides a clear metric for model performance.
@@ -66,9 +63,7 @@ $$
 #### (4) Sensitivity (Recall)
 - **Purpose**: Sensitivity (also known as Recall) measures the proportion of actual positives (e.g., target pixels) that are correctly identified by the model.
 - **Formula**: 
-$$
-\text{Sensitivity} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}
-$$
+$$\text{Sensitivity} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}$$
 
 - **Advantages**:
   - **Emphasis on Identifying Positive Pixels**: Sensitivity is crucial in medical and anomaly detection tasks where missing a positive (e.g., lesion) is more critical than a false positive.
@@ -77,15 +72,12 @@ $$
 #### (5) Specificity
 - **Purpose**: Specificity measures the proportion of actual negatives (e.g., background pixels) that are correctly identified by the model.
 - **Formula**: 
-$$
-\text{Specificity} = \frac{\text{True Negatives}}{\text{True Negatives} + \text{False Positives}}
-$$
+$$\text{Specificity} = \frac{\text{True Negatives}}{\text{True Negatives} + \text{False Positives}}$$
 
 - **Advantages**:
   - **Reduces False Positives**: Specificity is essential in applications where avoiding false positives is critical.
   - **Balances with Sensitivity**: Alongside sensitivity, specificity provides a balanced view of model performance by focusing on the correct classification of background pixels.
 
----
 
 ## 4. Loss function
 
@@ -106,7 +98,6 @@ $$\mathcal L_{focal}(y, \hat y) = -\sum_i \left[\left(1-\sigma(\hat y_i)\right)^
 
 A good value for $\gamma$ is generally 2.
 
----
 
 ## 5. Result
 **(1) EncDec -> focal_loss -> Adam(lr=0.001) -> 550 epoches**

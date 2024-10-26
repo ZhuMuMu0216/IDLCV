@@ -33,7 +33,8 @@ In image segmentation, various metrics are used to evaluate model performance. H
 
 #### (1) Dice Coefficient
 - **Purpose**: The Dice coefficient (also known as the F1 score in binary classification) measures the similarity between the predicted segmentation mask and the ground truth. It is widely used in image segmentation tasks.
-- **Formula**: 
+- **Formula**:
+
 $$\text{Dice} = \frac{2 \times |A \cap B|}{|A| + |B|}$$
 
 - **Advantages**:
@@ -63,6 +64,7 @@ $$\text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{T
 #### (4) Sensitivity (Recall)
 - **Purpose**: Sensitivity (also known as Recall) measures the proportion of actual positives (e.g., target pixels) that are correctly identified by the model.
 - **Formula**: 
+
 $$\text{Sensitivity} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}$$
 
 - **Advantages**:
@@ -71,6 +73,7 @@ $$\text{Sensitivity} = \frac{\text{True Positives}}{\text{True Positives} + \tex
 
 #### (5) Specificity
 - **Purpose**: Specificity measures the proportion of actual negatives (e.g., background pixels) that are correctly identified by the model.
+
 - **Formula**: 
 $$\text{Specificity} = \frac{\text{True Negatives}}{\text{True Negatives} + \text{False Positives}}$$
 

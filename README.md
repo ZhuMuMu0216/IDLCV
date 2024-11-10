@@ -143,7 +143,15 @@ Below is the code where you can change the threshold (In the section: **Train, v
 ```
 
 ## Poster
-I'm responsible for the whole Retinal blood vessel segementation and part of skin lesion segmentation.
+- I'm responsible for the whole Retinal blood vessel segementation and some click annotations and training of skin lesion segmentation. Besides, I made the whole poster.
+- $Cong$ and $Dong$ are responsible for the skin lesion segementation. 
+- $Yu Zhang$ did nothing.
+
+We got the average score and feedback that Professor said that Yu zhang almost knew nothing about the project during the presentation. Even when I told professor yu did nothing and I did the majority work, professor still gave me the same score as what yu got. Professor said that you are a team and you should make sure that anyone know the whole project.
+
+**But I think this is unfair. I have no right to control whether he studies or not. I have already shouldered my due responsibility for this kind of group work cooperation, so I wrote this paragraph to express my feelings about the professor's rating. dissatisfied.**
+
+<img src="./doc/image/poster.png" alt="Our Poster" width="800"/>
 
 ## Reference
 For more details about U-Net, refer to the original paper: [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://doi.org/10.1007/978-3-319-24574-4_28) by Ronneberger et al., MICCAI 2015.

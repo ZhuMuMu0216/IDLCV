@@ -1,1 +1,5 @@
-/segmentation-project/.vscode
+/segmentation/.vscode
+/classification/wandb
+/classification/.vscode
+/object_detection/.vscode
+/video/.vscode

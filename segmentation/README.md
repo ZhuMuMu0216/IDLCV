@@ -1,4 +1,4 @@
-# Mini-project for Retinal blood vessel segementation
+# Mini-project for Retinal blood vessel segmentation
 
 This is the project from **DTU-02516-IDLCV**, which aims to implement two architecture (**EncDec** & **U-Net**) for image segmentation. I used the DRIVE dataset and trained it on the a100sh (DTU-HPC). I evalute the performance on 5 different metrics (dice, loU, accuracy, sensitivity, specificity), and also try two different loss_function (**bce_loss** & **focal_loss**)
 
